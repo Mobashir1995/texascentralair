@@ -76,7 +76,7 @@ add_action( 'wp_insert_post', 'tca_apply_elementor_full_width_template_on_insert
 /**
  * Add Shortcode for Display Breadcumb with Breadcumb NavXT
  */
-function wpdocs_bartag_func( $atts ) {
+function wpdocs_bartag_func() {
 	ob_start();
 	if(function_exists('bcn_display'))
     {
