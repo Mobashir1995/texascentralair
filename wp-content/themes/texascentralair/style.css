@@ -13,4 +13,17 @@ Text Domain:  thechillbrothers
 .small, small {
     font-size: 85%;
 }
-
+.tca-content-wrapper a {
+    color: #bf0a30;
+    -webkit-transition: .5s;
+    -o-transition: .5s;
+    transition: .5s;
+}
+.tca-content-wrapper a:hover, 
+.tca-content-wrapper a:active, 
+.tca-content-wrapper a:focus {
+    color: #ef0d3c;
+    outline: 0;
+    text-decoration: underline;
+    transition: .5s;
+}
