@@ -30,5 +30,11 @@ Text Domain:  thechillbrothers
 
 /* BreadCumb Style */
 .tca-breadcrumbs a{
-    color: rgba(255,255,255,.5);
+    color: rgba(255,255,255,.5) !important;
+}
+.tca-breadcrumbs span.current-item{
+    color: rgba(255,255,255,.7);
+}
+.tca-breadcumb-separator {
+    padding: 0 5px;
 }
