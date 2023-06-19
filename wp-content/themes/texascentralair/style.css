@@ -13,17 +13,22 @@ Text Domain:  thechillbrothers
 .small, small {
     font-size: 85%;
 }
-.tca-content-wrapper a {
+.tca-content-wrapper a:not(.elementor-button) {
     color: #bf0a30;
     -webkit-transition: .5s;
     -o-transition: .5s;
     transition: .5s;
 }
-.tca-content-wrapper a:hover, 
-.tca-content-wrapper a:active, 
-.tca-content-wrapper a:focus {
+.tca-content-wrapper a:hover:not(.elementor-button), 
+.tca-content-wrapper a:active:not(.elementor-button), 
+.tca-content-wrapper a:focus:not(.elementor-button) {
     color: #ef0d3c;
     outline: 0;
     text-decoration: underline;
     transition: .5s;
+}
+
+/* BreadCumb Style */
+.tca-breadcrumbs a{
+    color: rgba(255,255,255,.5);
 }
