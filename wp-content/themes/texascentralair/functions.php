@@ -94,4 +94,4 @@ function tca_bcn_separator($separator, $position, $last_position, $depth)
     $separator ='<span class="tca-breadcumb-separator">'.$separator.'</span>';
     return $separator;
 }
-add_filter('bcn_display_separator', tca_bcn_separator, 10, 4);
+add_filter('bcn_display_separator', 'tca_bcn_separator', 10, 4);
