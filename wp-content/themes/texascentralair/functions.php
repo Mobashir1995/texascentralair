@@ -41,3 +41,19 @@ function pd_hello_child_enqueue() {
 	wp_enqueue_script('theme', get_stylesheet_directory_uri() . '/assets/js/theme.js', array( 'jquery' ), TEXAS_CENTRAL_AIR_CHILD_VERSION, true);
 }
 add_action( 'wp_enqueue_scripts', 'pd_hello_child_enqueue' );
+
+/**
+ * Add Wrapper for Elementor Full Width Template
+ */
+function tca_start_elementor_content_wrapper() {
+    echo '<div class="tca-content-wrapper">';
+}
+add_action( 'elementor/page_templates/header-footer/before_content', 'tca_start_elementor_content_wrapper' );
+
+/**
+ * Add Wrapper for Elementor Full Width Template
+ */
+function tca_end_elementor_content_wrapper() {
+    echo '</div>';
+}
+add_action( 'elementor/page_templates/header-footer/after_content', 'tca_end_elementor_content_wrapper' );
