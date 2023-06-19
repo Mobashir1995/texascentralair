@@ -87,3 +87,10 @@ function tca_breadcumb_navxt_shortcode() {
 	return ob_get_clean();
 }
 add_shortcode( 'tca_breadcumb', 'tca_breadcumb_navxt_shortcode' );
+
+add_filter('bcn_display_separator', my_bcn_separator, 10, 4);
+function my_bcn_separator($separator, $position, $last_position, $depth)
+{
+    $separator ='<span class="tca-breadcumb-separator">'.$separator.'</span>';
+    return $separator;
+}
