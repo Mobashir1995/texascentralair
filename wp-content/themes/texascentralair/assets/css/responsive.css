@@ -1,0 +1,15 @@
+@media only screen and (max-width: 1200px) {
+	.services-features .e-con-boxed.e-flex{
+		width: 33.33%
+	}
+}
+@media only screen and (max-width: 991px) {
+	.services-features .e-con-boxed.e-flex{
+		width: 50%
+	}
+}
+@media only screen and (max-width: 768px) {
+	.services-features .e-con-boxed.e-flex{
+		width: 100%
+	}
+}
