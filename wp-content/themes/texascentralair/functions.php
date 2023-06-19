@@ -72,3 +72,18 @@ function tca_apply_elementor_full_width_template_on_insert( int $post_ID, object
 	}
 }
 add_action( 'wp_insert_post', 'tca_apply_elementor_full_width_template_on_insert', 10, 3 );
+
+/**
+ * Add Shortcode for Display Breadcumb with Breadcumb NavXT
+ */
+function wpdocs_bartag_func( $atts ) {
+	ob_start();
+	if(function_exists('bcn_display'))
+    {
+		echo '<div class="breadcrumbs" typeof="BreadcrumbList" vocab="https://schema.org/">';
+        bcn_display();
+		echo '</div>';
+    }
+	return ob_get_clean();
+}
+add_shortcode( 'bartag', 'wpdocs_bartag_func' );
