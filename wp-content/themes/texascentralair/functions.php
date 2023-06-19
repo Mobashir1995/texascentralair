@@ -79,9 +79,12 @@ add_action( 'admin_init', function(){
 	) );
 
 	if( $query->have_postss() ) {
-		while( $query->have_postss() ) {
+		while( $query->have_posts() ) {
 			$query->the_post();
-			update_post_meta( get_the_ID(), '_wp_page_template', 'elementor_header_footer' );
+			if( in_array( get_post_type( get_the_ID() ), array( 'post', 'page' ) ) ) {
+				update_post_meta( get_the_ID(), '_wp_page_template', 'elementor_header_footer' );
+			}
 		}
+		wp_reset_postdata();
 	}
 } );
