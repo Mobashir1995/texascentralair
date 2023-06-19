@@ -57,3 +57,18 @@ function tca_end_elementor_content_wrapper() {
     echo '</div>';
 }
 add_action( 'elementor/page_templates/header-footer/after_content', 'tca_end_elementor_content_wrapper' );
+
+/**
+ * Apply a custom template when the post is inserted.
+ * 
+ * @param  int    $post_ID The post ID.
+ * @param  object $post    The post object
+ * @param  bool   $update  True if the post is updated, false if inserted.
+ * @return void
+ */
+function tca_apply_elementor_full_width_template_on_insert( int $post_ID, object $post, bool $update ) {
+	if ( empty( $update ) || 'auto-draft' === $post->post_status ) {
+		update_post_meta( $post_ID, '_wp_page_template', 'elementor_header_footer' );
+	}
+}
+add_action( 'wp_insert_post', 'tca_apply_elementor_full_width_template_on_insert', 10, 3 );
