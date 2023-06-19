@@ -75,13 +75,15 @@ add_action( 'wp_insert_post', 'tca_apply_elementor_full_width_template_on_insert
 
 add_action( 'admin_init', function(){
 	$query = new WP_Query( array(
-		'posts_per_page' = -1,
+		'posts_per_page' => -1,
 	) );
 
-	if( $query->have_postss() ) {
+	if( $query->have_posts() ) {
 		while( $query->have_posts() ) {
 			$query->the_post();
-			if( in_array( get_post_type( get_the_ID() ), array( 'post', 'page' ) ) ) {
+			if(
+				in_array( get_post_type( get_the_ID() ), array( 'post', 'page' ) )
+			) {
 				update_post_meta( get_the_ID(), '_wp_page_template', 'elementor_header_footer' );
 			}
 		}
