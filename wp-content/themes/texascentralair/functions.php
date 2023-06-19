@@ -80,7 +80,7 @@ function tca_breadcumb_navxt_shortcode() {
 	ob_start();
 	if(function_exists('bcn_display'))
     {
-		echo '<div class="breadcrumbs" typeof="BreadcrumbList" vocab="https://schema.org/">';
+		echo '<div class="tca-breadcrumbs" typeof="BreadcrumbList" vocab="https://schema.org/">';
         bcn_display();
 		echo '</div>';
     }
