@@ -72,21 +72,3 @@ function tca_apply_elementor_full_width_template_on_insert( int $post_ID, object
 	}
 }
 add_action( 'wp_insert_post', 'tca_apply_elementor_full_width_template_on_insert', 10, 3 );
-
-add_action( 'admin_init', function(){
-	$query = new WP_Query( array(
-		'posts_per_page' => -1,
-	) );
-
-	if( $query->have_posts() ) {
-		while( $query->have_posts() ) {
-			$query->the_post();
-			if(
-				in_array( get_post_type( get_the_ID() ), array( 'post', 'page' ) )
-			) {
-				update_post_meta( get_the_ID(), '_wp_page_template', 'elementor_header_footer' );
-			}
-		}
-		wp_reset_postdata();
-	}
-} );
