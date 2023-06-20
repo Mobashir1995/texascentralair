@@ -93,7 +93,7 @@ class TCA_Review_Slider extends \Elementor\Widget_Base {
 
                     <?php foreach( $settings['reviews'] as $review ) { ?>
                         <div class="review-slide swiper-slide">
-                            <div class="review-content"><?php echo get_the_excerpt( $review ); ?></div>
+                            <div class="review-content"><?php echo wp_trim_words( get_the_excerpt( $review ), 46, '...'); ?></div>
                             <div class="review-author">~ <?php echo get_the_title( $review ); ?></div>
                         </div>
                     <?php } ?>
