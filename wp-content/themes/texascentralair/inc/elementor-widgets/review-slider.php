@@ -85,33 +85,33 @@ class TCA_Review_Slider extends \Elementor\Widget_Base {
 	protected function render() {
         $settings = $this->get_settings_for_display();
 		?>
-            <!--<div class="tcb-banner"><center><img class="aligncenter" src="/wp-content/uploads/2021/11/Yeti-Bundle-Website.png" alt="" style="max-width:100%;" /></center></div>-->
-            <div class="swiper deal-slider">
-				<section class="header_slider_area swiper-wrapper" id="indexcarousel" style="">
-				<!-- <section>     -->
-				<?php if ( $settings['deal_lists'] ) { $count=0; foreach (  $settings['deal_lists'] as $item ) { $count++; ?>
-					<div class="swiper-slide "> 
-						<div id="slidersize<?php echo $count === 2 ? '4' : '3'; ?>" class="header_slider_bg" style="padding: 80px 0 100px 0; background-image: url(<?php echo $item['list_image']['url']; ?>);">
-							<div class="container">
-								<div class="row">
-									<div class="col-md-6">
-										<p><?php echo $item['list_subtitle'];?></p>
-										<h2 style="font-size: 50px;"><?php echo $item['list_title'];?></h2>
-										<p style="margin-top: 20px"><?php echo $item['list_short_description'];?></p> 
-										<div class="slide_button">
-											<a href="<?php echo $item['button_link']['url'];?>" class="btn-yellow" style="cursor: pointer;margin-top: 10px;"><?php echo $item['button_text'];?></a>
-										</div><!--end .slide_button-->
-										<p style="margin: 0px; padding: 0px; font-size: 12px"><?php echo $item['list_description'];?></p>
-									</div><!--end .col-md-6-->
-								</div><!--end .row-->
-							</div><!--end .container-->
-						</div></div><!--end .header_slider_bg-->
-					<?php } } ?>
-				
+            <div class="review-slider-section">
+                
+            <?php if( !empty( $settings['reviews'] ) ) { ?>
+                <div class="swiper review-slider">
+                    <div class="swiper-wrapper">
 
-				</section>
-				<div class="swiper-pagination"></div>
-			</div><!--end .header_slider_area-->
+                    <?php foreach( $settings['reviews'] as $review ) { ?>
+                        <div class="review-slide swiper-slide">
+                            <div class="review-content"><?php echo get_the_excerpt( $review ); ?></div>
+                        </div>
+                        <div class="review-author"><?php echo get_the_title( $review ); ?></div>
+                    <?php } ?>
+
+                    </div>
+                    <!-- If we need pagination -->
+                    <div class="swiper-pagination"></div>
+
+                    <!-- If we need navigation buttons -->
+                    <div class="swiper-button-prev"></div>
+                    <div class="swiper-button-next"></div>
+                </div><!--end .header_slider_area-->
+            <?php } ?>
+
+                <div class="review-slider-section-button">
+                    <a href="<?php echo $settings['button_url']['url']; ?>"><?php echo $settings['button_text']; ?></a>
+                </div>
+            </div>
 		<?php
 	}
 }
