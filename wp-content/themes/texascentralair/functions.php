@@ -95,3 +95,9 @@ function tca_bcn_separator($separator, $position, $last_position, $depth)
     return $separator;
 }
 add_filter('bcn_display_separator', 'tca_bcn_separator', 10, 4);
+
+
+/**
+ * Include Files
+ */
+require_once get_stylesheet_directory() . '/inc/custom-post-types.php';
