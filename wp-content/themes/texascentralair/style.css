@@ -75,8 +75,23 @@ Text Domain:  thechillbrothers
     color: rgba(255,255,255, 1);
 }
 .review-slider-section .swiper-pagination{
-    bottom: 5px !important;
+    bottom: 15px !important;
+    position: relative;
 }
 .review-slider-section .swiper-pagination .swiper-pagination-bullet{
-    background-color: rgba(255,255,255,0.25);
+    background-color: rgba(255,255,255,0.75);
+}
+.review-slider-section-button{
+    text-align: center;
+}
+.review-slider-section-button a{
+    padding: 8px 12px;
+    background: #fff;
+    line-height: 20px;
+    font-size: 14px;
+    border-radius: 4px;
+}
+.review-slider-section-button a:hover{
+    background: #393e46;
+    text-decoration: none !important;
 }
