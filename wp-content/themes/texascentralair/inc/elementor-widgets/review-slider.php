@@ -14,7 +14,7 @@ class TCA_Review_Slider extends \Elementor\Widget_Base {
 	}
 
 	public function get_categories() {
-		return [ 'pd-hello-child-widgets' ];
+		return [ 'tca-widgets' ];
 	}
 
 	public function get_keywords() {
@@ -37,7 +37,7 @@ class TCA_Review_Slider extends \Elementor\Widget_Base {
         $options = array();
 
         $reviews = get_posts( array(
-            'post_type'  => 'digital_card'
+            'post_type'  => 'review'
         ) );
 
         foreach ( $reviews as $key => $review ) {
