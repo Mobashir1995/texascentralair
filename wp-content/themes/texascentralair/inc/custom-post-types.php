@@ -39,7 +39,6 @@ function tca_custom_post_type_register() {
 		'supports'           => array( 'title', 'editor' ),
 	);
 
-	register_post_type( 'book', $args );
     register_post_type( 'review', $args );
 }
 
