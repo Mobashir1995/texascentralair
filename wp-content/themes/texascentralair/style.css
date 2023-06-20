@@ -66,7 +66,7 @@ Text Domain:  thechillbrothers
 }
 .swiper-button-next:after,
 .swiper-button-prev:after {
-    font-size: 20px;
+    font-size: 15px;
     color: rgba(255,255,255, 0.7);
     transition: all 500ms;
 }
@@ -94,4 +94,12 @@ Text Domain:  thechillbrothers
 .review-slider-section-button a:hover{
     background: #393e46;
     text-decoration: none !important;
+}
+.swiper-button-next,
+.swiper-button-prev{
+    right: -5px;
+    top: 40%;
+}
+.swiper-button-prev{
+    left: -5px;
 }
