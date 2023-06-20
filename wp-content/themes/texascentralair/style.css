@@ -38,3 +38,45 @@ Text Domain:  thechillbrothers
 .tca-breadcumb-separator {
     padding: 0 5px;
 }
+
+/* Review Slider */
+.review-slider-section{
+    max-width: 1140px;
+    margin: 0 auto;
+}
+.review-slider-section .review-content,
+.review-slider-section .review-author{
+    color: rgba(255,255,255,.7);
+    font-size: 18px;
+    line-height: 33px;
+    text-align: center;
+    margin-bottom: 25px
+}
+.review-slider-section .review-author {
+    font-size: 14px
+}
+.review-slider-section .review-content:before,
+.review-slider-section .review-content:after{
+    color: rgba(255,255,255,.3);
+    content: "\"";
+    font-size: 4em;
+    line-height: .1em;
+    margin-right: 0.25em;
+    vertical-align: -0.4em;
+}
+.swiper-button-next:after,
+.swiper-button-prev:after {
+    font-size: 20px;
+    color: rgba(255,255,255, 0.7);
+    transition: all 500ms;
+}
+.swiper-button-next:hover:after,
+.swiper-button-prev:hover:after {
+    color: rgba(255,255,255, 1);
+}
+.review-slider-section .swiper-pagination{
+    bottom: 5px !important;
+}
+.review-slider-section .swiper-pagination .swiper-pagination-bullet{
+    background-color: rgba(255,255,255,0.25);
+}

@@ -12,6 +12,7 @@ jQuery( document ).ready( function() {
         },
         pagination: {
             el: '.swiper-pagination',
+            clickable: true
         },
       });
 } );
