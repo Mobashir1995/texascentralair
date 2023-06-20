@@ -37,7 +37,8 @@ class TCA_Review_Slider extends \Elementor\Widget_Base {
         $options = array();
 
         $reviews = get_posts( array(
-            'post_type'  => 'review'
+            'post_type'  => 'review',
+            'posts_per_page' => -1,
         ) );
 
         foreach ( $reviews as $key => $review ) {
