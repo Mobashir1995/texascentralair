@@ -40,6 +40,7 @@ function tca_custom_post_type_register() {
 	);
 
 	register_post_type( 'book', $args );
+    register_post_type( 'review', $args );
 }
 
 add_action( 'init', 'tca_custom_post_type_register' );
