@@ -67,7 +67,11 @@ add_action( 'elementor/page_templates/header-footer/after_content', 'tca_end_ele
  * @return void
  */
 function tca_apply_elementor_full_width_template_on_insert( int $post_ID, object $post, bool $update ) {
-	if ( empty( $update ) || 'auto-draft' === $post->post_status ) {
+	if (
+		in_array( get_post_type($post_ID), array( 'post', 'page' ) ) &&
+		empty( $update ) ||
+		'auto-draft' === $post->post_status
+	) {
 		update_post_meta( $post_ID, '_wp_page_template', 'elementor_header_footer' );
 	}
 }
