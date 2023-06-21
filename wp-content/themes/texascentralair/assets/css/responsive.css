@@ -12,4 +12,8 @@
 	.services-features .e-con-boxed.e-flex{
 		width: 100%
 	}
+	.tca-col-6 {
+		width: 100%;
+		float: none;
+	}
 }

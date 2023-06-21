@@ -9,7 +9,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit; // Exit if accessed directly.
 }
 
-define( 'TEXAS_CENTRAL_AIR_CHILD_VERSION', '0.0.3.9' );
+define( 'TEXAS_CENTRAL_AIR_CHILD_VERSION', '0.0.3.10' );
 
 /**
  * After Setup Theme Hook

@@ -31,7 +31,10 @@ Text Domain:  thechillbrothers
 .site-navbar li {
     text-align: center;
 }
-
+.clear{
+    clear: both;
+    width: 100%;
+}
 /* BreadCumb Style */
 .tca-breadcrumbs a{
     color: rgba(255,255,255,.5) !important;
@@ -106,6 +109,60 @@ Text Domain:  thechillbrothers
 }
 .swiper-button-prev{
     left: -5px;
+}
+
+/* Contact Form */
+
+.wpcf7-form textarea{
+    height: 130px;
+    resize: none;
+    overflow: hidden;
+}
+.wpcf7-form textarea,
+.wpcf7-form input[type="text"],
+.wpcf7-form input[type="email"],
+.wpcf7-form select{
+    border: 1px solid #ccc ;
+}
+.wpcf7-form textarea:focus,
+.wpcf7-form input[type="text"]:focus,
+.wpcf7-form input[type="email"]:focus,
+.wpcf7-form select:focus{
+    border-color: #66afe9;
+    outline: none;
+    box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(102,175,233,.6)
+}
+.wpcf7-form textarea.wpcf7-not-valid,
+.wpcf7-form input[type="text"].wpcf7-not-valid,
+.wpcf7-form input[type="email"].wpcf7-not-valid,
+.wpcf7-form select.wpcf7-not-valid{
+    border-color: #dc3232;
+}
+.wpcf7-not-valid-tip{
+    margin-top: 5px;
+    font-size: 85%;
+}
+.tca-form-label{
+    width: 100%;
+}
+.tca-form-label strong{
+    margin-bottom: 5px;
+    display: block;
+}
+.tca-col-6 {
+    width: 50%;
+    float: left;
+}
+.tca-col-6,
+.tca-col-12{
+    padding-right: 20px;
+}
+.wpcf7-form-control-wrap{
+    display: block;
+}
+.wpcf7-list-item{
+    display: block;
+    margin: 0
 }
 
 /* Footer Vendors */
