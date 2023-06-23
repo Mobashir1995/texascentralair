@@ -115,7 +115,7 @@ class TCA_Quote_Slider extends \Elementor\Widget_Base {
 
                     <?php foreach( $settings['quotes'] as $quote ) { ?>
                         <div class="review-slide swiper-slide">
-                            <div class="swiper-slider-bg" style="height: <?php echo $quote['height']; ?>; background-image: url('<?php echo $quote['image']['url'] ?>')">
+                            <div class="swiper-slider-bg" style="height: <?php echo $settings['height']; ?>; background-image: url('<?php echo $quote['image']['url'] ?>')">
                                 <div class="review-content"><?php echo $quote['description']; ?></div>
                                 <div class="review-author">~ <?php echo $quote['author']; ?></div>
                             </div>
