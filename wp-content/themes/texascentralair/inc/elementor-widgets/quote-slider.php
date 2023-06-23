@@ -103,7 +103,7 @@ class TCA_Quote_Slider extends \Elementor\Widget_Base {
         $this->end_controls_section();
 
         $this->start_controls_section(
-			'content_section',
+			'content_style',
 			[
 				'label' => esc_html__( 'Description Style', 'textdomain' ),
 				'tab' => \Elementor\Controls_Manager::TAB_STYLE,
@@ -144,7 +144,7 @@ class TCA_Quote_Slider extends \Elementor\Widget_Base {
         $this->end_controls_section();
 
         $this->start_controls_section(
-			'author_section',
+			'author_style',
 			[
 				'label' => esc_html__( 'Author Style', 'textdomain' ),
 				'tab' => \Elementor\Controls_Manager::TAB_STYLE,
