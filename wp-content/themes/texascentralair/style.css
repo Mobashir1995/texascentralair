@@ -47,7 +47,8 @@ Text Domain:  thechillbrothers
 }
 
 /* Quote Slider */
-.quote-slider .review-content{
+.quote-slider .review-content:before,
+.quote-slider .review-content:after{
     display: none;
 }
 
