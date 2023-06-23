@@ -85,7 +85,7 @@ class TCA_Quote_Slider extends \Elementor\Widget_Base {
 		?>
             <div class="review-slider-section">
                 
-            <?php if( !empty( $settings['reviews'] ) ) { ?>
+            <?php if( !empty( $settings['quotes'] ) ) { ?>
                 <div class="swiper review-slider">
                     <div class="swiper-wrapper">
 
@@ -103,9 +103,6 @@ class TCA_Quote_Slider extends \Elementor\Widget_Base {
                 </div><!--end .header_slider_area-->
             <?php } ?>
 
-                <div class="review-slider-section-button">
-                    <a href="<?php echo $settings['button_url']['url']; ?>"><?php echo $settings['button_text']; ?></a>
-                </div>
             </div>
 		<?php
 	}
