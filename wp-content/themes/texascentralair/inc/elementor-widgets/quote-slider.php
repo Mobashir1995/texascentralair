@@ -114,7 +114,7 @@ class TCA_Quote_Slider extends \Elementor\Widget_Base {
 			\Elementor\Group_Control_Typography::get_type(),
 			[
 				'name' => 'content_typography',
-				'selector' => '{{WRAPPER}} .review-content',
+				'selector' => '{{WRAPPER}} .review-content h2',
 			]
 		);
 
@@ -124,7 +124,7 @@ class TCA_Quote_Slider extends \Elementor\Widget_Base {
 				'label' => esc_html__( 'Description Color', 'textdomain' ),
 				'type' => \Elementor\Controls_Manager::COLOR,
 				'selectors' => [
-					'{{WRAPPER}} .review-content' => 'color: {{VALUE}}',
+					'{{WRAPPER}} .review-content h2' => 'color: {{VALUE}}',
 				],
 			]
 		);
@@ -136,7 +136,7 @@ class TCA_Quote_Slider extends \Elementor\Widget_Base {
 				'type' => \Elementor\Controls_Manager::DIMENSIONS,
 				'size_units' => [ 'px', '%', 'em', 'rem', 'custom' ],
 				'selectors' => [
-					'{{WRAPPER}} .review-content' => 'margin: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+					'{{WRAPPER}} .review-content h2' => 'margin: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
 				],
 			]
 		);
@@ -198,7 +198,7 @@ class TCA_Quote_Slider extends \Elementor\Widget_Base {
                     <?php foreach( $settings['quotes'] as $quote ) { ?>
                         <div class="review-slide swiper-slide">
                             <div class="swiper-slider-bg" style="height: <?php echo $settings['height']; ?>px; background-image: url('<?php echo $quote['image']['url'] ?>')">
-                                <div class="review-content"><?php echo $quote['description']; ?></div>
+                                <div class="review-content"><h2><?php echo $quote['description']; ?></h2></div>
                                 <div class="review-author">~ <?php echo $quote['author']; ?></div>
                             </div>
                         </div>
