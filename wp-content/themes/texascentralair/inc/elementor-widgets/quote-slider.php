@@ -86,7 +86,7 @@ class TCA_Quote_Slider extends \Elementor\Widget_Base {
 			]
 		);
 
-        $repeater->add_control(
+        $this->add_control(
 			'height',
 			[
 				'label' => esc_html__( 'Height', 'textdomain' ),
