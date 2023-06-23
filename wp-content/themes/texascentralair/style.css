@@ -46,6 +46,11 @@ Text Domain:  thechillbrothers
     padding: 0 5px;
 }
 
+/* Quote Slider */
+.quote-slider .review-content{
+    display: none;
+}
+
 /* Review Slider */
 .review-slider-section{
     max-width: 1140px;

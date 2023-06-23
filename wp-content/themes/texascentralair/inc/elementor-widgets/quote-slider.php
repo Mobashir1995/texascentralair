@@ -189,7 +189,7 @@ class TCA_Quote_Slider extends \Elementor\Widget_Base {
 	protected function render() {
         $settings = $this->get_settings_for_display();
 		?>
-            <div class="review-slider-section">
+            <div class="review-slider-section quote-slider">
                 
             <?php if( !empty( $settings['quotes'] ) ) { ?>
                 <div class="swiper review-slider">
