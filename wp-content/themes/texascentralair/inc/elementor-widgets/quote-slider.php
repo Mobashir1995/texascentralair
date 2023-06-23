@@ -89,7 +89,7 @@ class TCA_Quote_Slider extends \Elementor\Widget_Base {
         $this->add_control(
 			'height',
 			[
-				'label' => esc_html__( 'Height', 'textdomain' ),
+				'label' => esc_html__( 'Slider Height', 'textdomain' ),
 				'type' => \Elementor\Controls_Manager::NUMBER,
 				'show_label' => true,
 				'label_block' => true,
@@ -97,6 +97,68 @@ class TCA_Quote_Slider extends \Elementor\Widget_Base {
 				'max' => 500,
 				'step' => 5,
 				'default' => 400,
+			]
+		);
+
+        $this->add_group_control(
+			\Elementor\Group_Control_Typography::get_type(),
+			[
+				'name' => 'content_typography',
+				'selector' => '{{WRAPPER}} .review-content',
+			]
+		);
+
+        $this->add_group_control(
+			\Elementor\Group_Control_Typography::get_type(),
+			[
+				'name' => 'author_typography',
+				'selector' => '{{WRAPPER}} .review-author',
+			]
+		);
+
+        $this->add_control(
+			'description_color',
+			[
+				'label' => esc_html__( 'Description Color', 'textdomain' ),
+				'type' => \Elementor\Controls_Manager::COLOR,
+				'selectors' => [
+					'{{WRAPPER}} .review-content' => 'color: {{VALUE}}',
+				],
+			]
+		);
+
+        $this->add_control(
+			'author_color',
+			[
+				'label' => esc_html__( 'Author Color', 'textdomain' ),
+				'type' => \Elementor\Controls_Manager::COLOR,
+				'selectors' => [
+					'{{WRAPPER}} .review-author' => 'color: {{VALUE}}',
+				],
+			]
+		);
+
+        $this->add_control(
+			'description_spacing',
+			[
+				'label' => esc_html__( 'Description Spacing', 'textdomain' ),
+				'type' => \Elementor\Controls_Manager::DIMENSIONS,
+				'size_units' => [ 'px', '%', 'em', 'rem', 'custom' ],
+				'selectors' => [
+					'{{WRAPPER}} .review-content' => 'margin: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+				],
+			]
+		);
+
+        $this->add_control(
+			'author_spacing',
+			[
+				'label' => esc_html__( 'Author Spacing', 'textdomain' ),
+				'type' => \Elementor\Controls_Manager::DIMENSIONS,
+				'size_units' => [ 'px', '%', 'em', 'rem', 'custom' ],
+				'selectors' => [
+					'{{WRAPPER}} .review-author' => 'margin: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+				],
 			]
 		);
 
