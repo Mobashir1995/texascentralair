@@ -93,6 +93,10 @@ class TCA_Quote_Slider extends \Elementor\Widget_Base {
 				'type' => \Elementor\Controls_Manager::NUMBER,
 				'show_label' => true,
 				'label_block' => true,
+                'min' => 100,
+				'max' => 500,
+				'step' => 5,
+				'default' => 400,
 			]
 		);
 
