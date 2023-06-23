@@ -78,6 +78,26 @@ class TCA_Quote_Slider extends \Elementor\Widget_Base {
 
 		$this->end_controls_section();
 
+        $this->start_controls_section(
+			'content_section',
+			[
+				'label' => esc_html__( 'Content', 'textdomain' ),
+				'tab' => \Elementor\Controls_Manager::TAB_CONTENT,
+			]
+		);
+
+        $repeater->add_control(
+			'height',
+			[
+				'label' => esc_html__( 'Height', 'textdomain' ),
+				'type' => \Elementor\Controls_Manager::NUMBER,
+				'show_label' => true,
+				'label_block' => true,
+			]
+		);
+
+        $this->end_controls_section();
+
 	}
 
 	protected function render() {
@@ -91,7 +111,7 @@ class TCA_Quote_Slider extends \Elementor\Widget_Base {
 
                     <?php foreach( $settings['quotes'] as $quote ) { ?>
                         <div class="review-slide swiper-slide">
-                            <div class="swiper-slider-bg" style="background-image: url('<?php echo $quote['image']['url'] ?>')">
+                            <div class="swiper-slider-bg" style="height: <?php echo $quote['height']; ?>; background-image: url('<?php echo $quote['image']['url'] ?>')">
                                 <div class="review-content"><?php echo $quote['description']; ?></div>
                                 <div class="review-author">~ <?php echo $quote['author']; ?></div>
                             </div>
