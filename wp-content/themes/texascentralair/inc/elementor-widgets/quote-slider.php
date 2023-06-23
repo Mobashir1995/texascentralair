@@ -81,7 +81,7 @@ class TCA_Quote_Slider extends \Elementor\Widget_Base {
         $this->start_controls_section(
 			'style_section',
 			[
-				'label' => esc_html__( 'Style', 'textdomain' ),
+				'label' => esc_html__( 'General Style', 'textdomain' ),
 				'tab' => \Elementor\Controls_Manager::TAB_STYLE,
 			]
 		);
@@ -100,19 +100,21 @@ class TCA_Quote_Slider extends \Elementor\Widget_Base {
 			]
 		);
 
-        $this->add_group_control(
-			\Elementor\Group_Control_Typography::get_type(),
+        $this->end_controls_section();
+
+        $this->start_controls_section(
+			'content_section',
 			[
-				'name' => 'content_typography',
-				'selector' => '{{WRAPPER}} .review-content',
+				'label' => esc_html__( 'Description Style', 'textdomain' ),
+				'tab' => \Elementor\Controls_Manager::TAB_STYLE,
 			]
 		);
 
         $this->add_group_control(
 			\Elementor\Group_Control_Typography::get_type(),
 			[
-				'name' => 'author_typography',
-				'selector' => '{{WRAPPER}} .review-author',
+				'name' => 'content_typography',
+				'selector' => '{{WRAPPER}} .review-content',
 			]
 		);
 
@@ -128,17 +130,6 @@ class TCA_Quote_Slider extends \Elementor\Widget_Base {
 		);
 
         $this->add_control(
-			'author_color',
-			[
-				'label' => esc_html__( 'Author Color', 'textdomain' ),
-				'type' => \Elementor\Controls_Manager::COLOR,
-				'selectors' => [
-					'{{WRAPPER}} .review-author' => 'color: {{VALUE}}',
-				],
-			]
-		);
-
-        $this->add_control(
 			'description_spacing',
 			[
 				'label' => esc_html__( 'Description Spacing', 'textdomain' ),
@@ -146,6 +137,35 @@ class TCA_Quote_Slider extends \Elementor\Widget_Base {
 				'size_units' => [ 'px', '%', 'em', 'rem', 'custom' ],
 				'selectors' => [
 					'{{WRAPPER}} .review-content' => 'margin: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+				],
+			]
+		);
+
+        $this->end_controls_section();
+
+        $this->start_controls_section(
+			'author_section',
+			[
+				'label' => esc_html__( 'Author Style', 'textdomain' ),
+				'tab' => \Elementor\Controls_Manager::TAB_STYLE,
+			]
+		);
+
+        $this->add_group_control(
+			\Elementor\Group_Control_Typography::get_type(),
+			[
+				'name' => 'author_typography',
+				'selector' => '{{WRAPPER}} .review-author',
+			]
+		);
+
+        $this->add_control(
+			'author_color',
+			[
+				'label' => esc_html__( 'Author Color', 'textdomain' ),
+				'type' => \Elementor\Controls_Manager::COLOR,
+				'selectors' => [
+					'{{WRAPPER}} .review-author' => 'color: {{VALUE}}',
 				],
 			]
 		);
