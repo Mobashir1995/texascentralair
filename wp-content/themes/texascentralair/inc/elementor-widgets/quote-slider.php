@@ -1,5 +1,5 @@
 <?php
-class TCA_Review_Slider extends \Elementor\Widget_Base {
+class TCA_Quote_Slider extends \Elementor\Widget_Base {
 
 	public function get_name() {
 		return 'quote-slider';
