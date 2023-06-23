@@ -79,7 +79,7 @@ class TCA_Quote_Slider extends \Elementor\Widget_Base {
 		$this->end_controls_section();
 
         $this->start_controls_section(
-			'content_section',
+			'style_section',
 			[
 				'label' => esc_html__( 'Content', 'textdomain' ),
 				'tab' => \Elementor\Controls_Manager::TAB_CONTENT,
