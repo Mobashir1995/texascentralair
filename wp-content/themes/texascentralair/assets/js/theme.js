@@ -3,9 +3,9 @@ jQuery( document ).ready( function() {
         // Default parameters
         slidesPerView: 1,
         loop: true,
-        autoplay: {
-            delay: 5000,
-        },
+        // autoplay: {
+        //     delay: 5000,
+        // },
         navigation: {
             nextEl: '.swiper-button-next',
             prevEl: '.swiper-button-prev',
