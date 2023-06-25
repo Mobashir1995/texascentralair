@@ -124,7 +124,11 @@ Text Domain:  thechillbrothers
     left: -5px;
 }
 
-/* Pagination */
+/* Blog Grid */
+.tca-blog-grid{
+    text-align: center;
+}
+/* Blog Pagination */
 .tca-blog-pagination {
     text-align: center;
 }

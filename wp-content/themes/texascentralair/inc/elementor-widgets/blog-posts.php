@@ -78,7 +78,7 @@ class TCA_Blog_Posts extends \Elementor\Widget_Base {
 		?>
             <div class="tca-blog-grid">
                 <h2><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
-                <div class="tca-blog-grid-excerpt"><?php the_excerpt(); ?></div>
+                <div class="tca-blog-grid-excerpt"><h3><?php echo get_the_excerpt(); ?></h3></div>
                 <div class="tca-blog-grid-button"><a class="elementor-button" href="<?php the_permalink(); ?>">Read More</a></div>
             </div>
 		<?php
