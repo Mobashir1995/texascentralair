@@ -79,7 +79,7 @@ class TCA_Blog_Posts extends \Elementor\Widget_Base {
             <div class="tca-blog-grid">
                 <h2><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
                 <div class="tca-blog-grid-excerpt"><?php the_excerpt(); ?></div>
-                <div class="tca-blog-grid-button elementor-button"><a href="<?php the_permalink(); ?>">Read More</a></div>
+                <div class="tca-blog-grid-button"><a class="elementor-button" href="<?php the_permalink(); ?>">Read More</a></div>
             </div>
 		<?php
             }
@@ -89,17 +89,13 @@ class TCA_Blog_Posts extends \Elementor\Widget_Base {
 
                 $big = 999999999; // need an unlikely integer
                     
-                $pagination = paginate_links( array(
+                echo paginate_links( array(
                     'base' => str_replace( $big, '%#%', esc_url( get_pagenum_link( $big ) ) ),
                     'format' => '?paged=%#%',
                     'current' => max( 1, get_query_var('paged') ),
                     'total' => $posts->max_num_pages,
-                    'type'=>'array',
+                    'type'=>'list',
                 ) );
-
-                if( is_array( $pagination ) ) {
-                    print_r($pagination);
-                }
             
             echo '</div>';
         }
