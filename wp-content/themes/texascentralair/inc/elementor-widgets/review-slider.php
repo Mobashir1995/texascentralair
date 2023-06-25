@@ -56,6 +56,42 @@ class TCA_Review_Slider extends \Elementor\Widget_Base {
 			]
 		);
 
+		$this->add_control(
+			'autoplay',
+			[
+				'label' => esc_html__( 'Autoplay', 'textdomain' ),
+				'type' => \Elementor\Controls_Manager::SWITCHER,
+				'label_on' => esc_html__( 'Show', 'textdomain' ),
+				'label_off' => esc_html__( 'Hide', 'textdomain' ),
+				'return_value' => 'yes',
+				'default' => 'yes',
+			]
+		);
+
+		$this->add_control(
+			'arrows',
+			[
+				'label' => esc_html__( 'Arrows', 'textdomain' ),
+				'type' => \Elementor\Controls_Manager::SWITCHER,
+				'label_on' => esc_html__( 'Show', 'textdomain' ),
+				'label_off' => esc_html__( 'Hide', 'textdomain' ),
+				'return_value' => 'yes',
+				'default' => 'yes',
+			]
+		);
+
+		$this->add_control(
+			'dots',
+			[
+				'label' => esc_html__( 'Dots', 'textdomain' ),
+				'type' => \Elementor\Controls_Manager::SWITCHER,
+				'label_on' => esc_html__( 'Show', 'textdomain' ),
+				'label_off' => esc_html__( 'Hide', 'textdomain' ),
+				'return_value' => 'yes',
+				'default' => 'yes',
+			]
+		);
+
         $this->add_control(
 			'button_url',
 			[
@@ -84,8 +120,9 @@ class TCA_Review_Slider extends \Elementor\Widget_Base {
 
 	protected function render() {
         $settings = $this->get_settings_for_display();
+		$autoplay = 'yes' === $settings['autoplay'] ? 5000 : 0;
 		?>
-            <div class="review-slider-section" data-swiper-autoplay="0">
+            <div class="review-slider-section <?php echo esc_attr( $arrows . $dots ); ?>" data-swiper-autoplay="<?php echo esc_attr($autoplay); ?>">
                 
             <?php if( !empty( $settings['reviews'] ) ) { ?>
                 <div class="swiper review-slider">
@@ -99,12 +136,18 @@ class TCA_Review_Slider extends \Elementor\Widget_Base {
                     <?php } ?>
 
                     </div>
-                    <!-- If we need pagination -->
-                    <div class="swiper-pagination"></div>
 
-                    <!-- If we need navigation buttons -->
-                    <div class="swiper-button-prev"></div>
-                    <div class="swiper-button-next"></div>
+					<?php if ( 'yes' === $settings['dots'] ) { ?>
+                    	<!-- If we need pagination -->
+                    	<div class="swiper-pagination"></div>
+					<?php } ?>
+					
+					<?php if ( 'yes' === $settings['arrows'] ) { ?>
+						<!-- If we need navigation buttons -->
+						<div class="swiper-button-prev"></div>
+						<div class="swiper-button-next"></div>
+					<?php } ?>
+
                 </div><!--end .header_slider_area-->
             <?php } ?>
 
