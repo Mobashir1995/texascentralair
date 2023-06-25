@@ -127,6 +127,10 @@ Text Domain:  thechillbrothers
 /* Blog Grid */
 .tca-blog-grid{
     text-align: center;
+    margin-bottom: 40PX;
+}
+.tca-blog-grid-button {
+    margin: 30px;
 }
 /* Blog Pagination */
 .tca-blog-pagination {
