@@ -124,6 +124,40 @@ Text Domain:  thechillbrothers
     left: -5px;
 }
 
+/* Pagination */
+.tca-blog-pagination {
+    text-align: center;
+}
+.tca-blog-pagination ul{
+    list-style: none;
+    overflow: hidden;
+    padding: 5px;
+    display: inline-block;
+}
+.tca-blog-pagination ul:after{
+    height: 1px;
+    width: 100%;
+}
+.tca-blog-pagination ul li {
+    float: left;
+    margin: 2px;
+}
+.tca-blog-pagination li a{
+    font-size: 16px;
+    line-height: 20px;
+    color: #F1F0EF !important;
+    background-color: #BF0A30;
+    border: 2px solid #BF0A30;
+    border-radius: 4px 4px 4px 4px;
+    padding: 5px 10px 5px 10px;
+}
+.tca-blog-pagination li a:hover {
+    background: #393E46;
+    color: #393E46;
+    border-color: #393E46;
+    text-decoration: none !important;
+}
+
 /* Contact Form */
 
 .wpcf7-form textarea{
