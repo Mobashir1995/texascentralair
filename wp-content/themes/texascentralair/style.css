@@ -129,6 +129,9 @@ Text Domain:  thechillbrothers
     text-align: center;
     margin-bottom: 40PX;
 }
+.tca-blog-grid h2{
+    text-transform: uppercase;
+}
 .tca-blog-grid-button {
     margin: 30px;
 }
