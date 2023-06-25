@@ -85,7 +85,7 @@ class TCA_Review_Slider extends \Elementor\Widget_Base {
 	protected function render() {
         $settings = $this->get_settings_for_display();
 		?>
-            <div class="review-slider-section">
+            <div class="review-slider-section" data-swiper-autoplay="0">
                 
             <?php if( !empty( $settings['reviews'] ) ) { ?>
                 <div class="swiper review-slider">
