@@ -63,7 +63,11 @@ Text Domain:  thechillbrothers
     font-size: 18px;
     line-height: 33px;
     text-align: center;
-    margin-bottom: 25px
+    margin-bottom: 25px;
+    overflow: hidden;
+}
+.review-slide .swiper-slider-bg {
+    overflow: hidden;
 }
 .review-slider-section .review-author {
     font-size: 14px
