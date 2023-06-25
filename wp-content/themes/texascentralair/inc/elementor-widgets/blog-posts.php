@@ -66,11 +66,14 @@ class TCA_Blog_Posts extends \Elementor\Widget_Base {
 
 	protected function render() {
         $settings = $this->get_settings_for_display();
-        $paged = ( get_query_var('paged') ) ? get_query_var('paged') : 1;
-        $posts= new WP_Query(array(
+        $args = array(
             'posts_per_page' => $settings['limit'],
-            'paged' => $paged
-        ));
+        );
+        if ( 'yes' === $settings['pagination'] ) {
+            $paged = ( get_query_var('paged') ) ? get_query_var('paged') : 1;
+            $args['paged'] = $paged;
+        }
+        $posts= new WP_Query( $args );
 
         if( $posts->have_posts() ){
             while( $posts->have_posts() ){
@@ -85,19 +88,21 @@ class TCA_Blog_Posts extends \Elementor\Widget_Base {
             }
             wp_reset_postdata();
 
-            echo '<div class="tca-blog-pagination">';
+            if ( 'yes' === $settings['pagination'] ) {
+                echo '<div class="tca-blog-pagination">';
 
-                $big = 999999999; // need an unlikely integer
-                    
-                echo paginate_links( array(
-                    'base' => str_replace( $big, '%#%', esc_url( get_pagenum_link( $big ) ) ),
-                    'format' => '?paged=%#%',
-                    'current' => max( 1, get_query_var('paged') ),
-                    'total' => $posts->max_num_pages,
-                    'type'=>'list',
-                ) );
-            
-            echo '</div>';
+                    $big = 999999999; // need an unlikely integer
+                        
+                    echo paginate_links( array(
+                        'base' => str_replace( $big, '%#%', esc_url( get_pagenum_link( $big ) ) ),
+                        'format' => '?paged=%#%',
+                        'current' => max( 1, get_query_var('paged') ),
+                        'total' => $posts->max_num_pages,
+                        'type'=>'list',
+                    ) );
+                
+                echo '</div>';
+            }
         }
 	}
 }
