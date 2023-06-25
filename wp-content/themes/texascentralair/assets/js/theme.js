@@ -15,4 +15,21 @@ jQuery( document ).ready( function() {
             clickable: true
         },
       });
+
+      const review_slider = new Swiper('.quote-slider', {
+        // Default parameters
+        slidesPerView: 1,
+        loop: true,
+        autoplay: {
+            delay: 10000,
+        },
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+        },
+        pagination: {
+            el: '.swiper-pagination',
+            clickable: true
+        },
+      });
 } );
