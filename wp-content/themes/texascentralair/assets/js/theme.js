@@ -21,7 +21,7 @@ jQuery( document ).ready( function() {
         slidesPerView: 1,
         loop: true,
         autoplay: {
-            delay: 10000,
+            delay: 7000,
         },
         navigation: {
             nextEl: '.swiper-button-next',
