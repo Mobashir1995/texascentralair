@@ -69,7 +69,7 @@ add_action( 'elementor/page_templates/header-footer/after_content', 'tca_end_ele
  */
 function tca_apply_elementor_full_width_template_on_insert( int $post_ID, object $post, bool $update ) {
 	if (
-		in_array( get_post_type($post_ID), array( 'post', 'page' ) ) &&
+		in_array( get_post_type($post_ID), array( 'post', 'page', 'review' ) ) &&
 		empty( $update ) ||
 		'auto-draft' === $post->post_status
 	) {
