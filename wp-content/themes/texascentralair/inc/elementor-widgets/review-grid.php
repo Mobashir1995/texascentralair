@@ -67,7 +67,7 @@ class TCA_Review_Grids extends \Elementor\Widget_Base {
 	protected function render() {
         $settings = $this->get_settings_for_display();
         $args = array(
-            'posts_per_page' => 'review',
+            'post_type' => 'review',
             'posts_per_page' => $settings['limit'],
         );
         if ( 'yes' === $settings['pagination'] ) {
