@@ -135,6 +135,39 @@ Text Domain:  thechillbrothers
 .tca-blog-grid-button {
     margin: 30px;
 }
+
+/* Review Grid */
+.tca-review-grid-container {
+    overflow: hidden;
+}
+.tca-review-grid {
+    width: 46%;
+    float: left;
+    background: #fff;
+    padding: 20px;
+    border-radius: 4px;
+    margin: 15px 2%;
+    box-shadow: rgba(0,0,0,.14) 2px 2px 20px;
+}
+.tca-review-grid h3{
+    margin: 0 0 20px 0;
+    padding: 0;
+    font-weight: 400;
+    font-size: 20px;
+    color: #bf0a30;
+    position: relative;
+}
+.tca-review-grid h3:after{
+    content: '';
+    position: absolute;
+    bottom: 0px;
+    left: 0;
+    width: 30px;
+    background: #444;
+    height: 2px;
+    z-index: 99999;
+}
+
 /* Blog Pagination */
 .tca-blog-pagination {
     text-align: center;

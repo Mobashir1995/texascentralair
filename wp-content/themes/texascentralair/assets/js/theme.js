@@ -32,4 +32,10 @@ jQuery( document ).ready( function() {
             clickable: true
         },
       });
+
+      jQuery('.tca-review-grid-container').masonry({
+        // options
+        itemSelector: '.tca-review-grid',
+        columnWidth: 200
+      });
 } );

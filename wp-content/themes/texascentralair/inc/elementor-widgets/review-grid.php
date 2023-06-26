@@ -82,7 +82,7 @@ class TCA_Review_Grids extends \Elementor\Widget_Base {
                 $posts->the_post();
 		?>
             <div class="tca-review-grid">
-                <h2><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
+                <h3><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
                 <div class="tca-blog-grid-excerpt"><?php the_content(); ?></div>
             </div>
 		<?php
