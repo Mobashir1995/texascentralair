@@ -14,7 +14,7 @@ class TCA_Review_Grids extends \Elementor\Widget_Base {
 	}
 
 	public function get_categories() {
-		return [ 'tca-reviews' ];
+		return [ 'tca-widgets' ];
 	}
 
 	public function get_keywords() {
