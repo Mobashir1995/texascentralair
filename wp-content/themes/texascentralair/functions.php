@@ -9,7 +9,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit; // Exit if accessed directly.
 }
 
-define( 'TEXAS_CENTRAL_AIR_CHILD_VERSION', '0.0.3.23' );
+define( 'TEXAS_CENTRAL_AIR_CHILD_VERSION', '0.0.3.24' );
 
 /**
  * After Setup Theme Hook
@@ -37,7 +37,7 @@ function pd_hello_child_enqueue() {
 	wp_dequeue_script( 'hello-theme-frontend' );
 	//Enqueue Scripts.
 	wp_enqueue_script('jquery');
-	wp_enqueue_script('masonry-js', 'https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js', array(), TEXAS_CENTRAL_AIR_CHILD_VERSION, false);
+	wp_enqueue_script('masonry-js', 'https://unpkg.com/packery@2/dist/packery.pkgd.js', array(), TEXAS_CENTRAL_AIR_CHILD_VERSION, false);
 	wp_enqueue_script('swiper-js', 'https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js', array(), TEXAS_CENTRAL_AIR_CHILD_VERSION, false);
 	wp_enqueue_script('theme', get_stylesheet_directory_uri() . '/assets/js/theme.js', array( 'jquery' ), TEXAS_CENTRAL_AIR_CHILD_VERSION, true);
 }

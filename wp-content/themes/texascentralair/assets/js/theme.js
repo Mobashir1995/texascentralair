@@ -33,9 +33,9 @@ jQuery( document ).ready( function() {
         },
       });
 
-      jQuery('.tca-review-grid-container').masonry({
+      jQuery('.tca-review-grid-container').packery({
         // options
         itemSelector: '.tca-review-grid',
-        columnWidth: 200
+        gutter: 10
       });
 } );
