@@ -130,7 +130,7 @@ Text Domain:  thechillbrothers
     margin-bottom: 40PX;
 }
 .tca-blog-grid h2{
-    text-transform: uppercase;
+    text-transform: capitalize;
 }
 .tca-blog-grid-button {
     margin: 30px;
