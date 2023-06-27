@@ -68,6 +68,7 @@ select:focus{
 .menu-search-form input[type="search"] {
     max-width: 170px;
     height: 34px;
+    border-color: #ccc !important;
 }
 .menu-search-form input[type="submit"] {
     display: none;
