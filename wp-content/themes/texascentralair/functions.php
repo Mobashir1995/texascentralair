@@ -93,13 +93,40 @@ function tca_breadcumb_navxt_shortcode() {
 }
 add_shortcode( 'tca_breadcumb', 'tca_breadcumb_navxt_shortcode' );
 
-
+/**
+ * Add custom html wrapper to breadcumb separator
+ * 
+ * @param string $separator
+ * @param string $position
+ * @param string $last_position
+ * @param integer $depth
+ * 
+ * @return string $separator
+ */
 function tca_bcn_separator($separator, $position, $last_position, $depth)
 {
     $separator ='<span class="tca-breadcumb-separator">'.$separator.'</span>';
     return $separator;
 }
 add_filter('bcn_display_separator', 'tca_bcn_separator', 10, 4);
+
+/**
+ * Add Search Form to the Main Menu
+ * 
+ * @param string $items
+ * @param object $args
+ * 
+ * @return string $items
+ */
+function add_last_nav_item($items, $args) {
+	if ( 'Main Menu' === $args->menu ) {
+		  $homelink = get_search_form(false);
+		  $items .= '<li>'.$homelink.'</li>';
+		  return $items;
+	}
+	return $items;
+}
+add_filter( 'wp_nav_menu_items', 'add_last_nav_item', 10, 2 );
 
 
 /**
