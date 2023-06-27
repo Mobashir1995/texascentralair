@@ -21,4 +21,7 @@
 		width: 100%;
 		float: none;
 	}
+	.search-result-page-container{
+		width: 95%;   
+    }
 }

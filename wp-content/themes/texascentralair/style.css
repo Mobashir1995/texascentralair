@@ -294,6 +294,16 @@ select:focus{
     margin: 0
 }
 
+/* Search Page */
+.search-result-page-container {
+    width: 66.66%;
+    margin: 60px auto;
+}
+
+.search-result-page-container h2{
+    text-align: center
+}
+
 /* Footer Vendors */
 .footer-vendors svg{
     color: rgba(255,255,255,.5);
