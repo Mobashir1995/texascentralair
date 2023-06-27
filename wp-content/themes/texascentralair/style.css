@@ -44,10 +44,14 @@ Text Domain:  thechillbrothers
 }
 /* Menu */
 .menu-search-form {
-    padding: 15px !important;
+    padding: 10px !important;
 }
 .menu-search-form form {
     text-align: left;
+}
+.menu-search-form input[type="search"] {
+    max-width: 170px;
+    height: 34px;
 }
 .menu-search-form input[type="submit"] {
     display: none;
