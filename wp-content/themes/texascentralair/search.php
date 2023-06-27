@@ -16,6 +16,8 @@
             the_posts_pagination( array(
                 'prev_text' => __( 'Previous', 'twentyfifteen' ),
                 'next_text' => __( 'Next', 'twentyfifteen' ),
+                'type'      => 'list',
+                'class'     => 'tca-blog-pagination',
                 'before_page_number' => '<span class="meta-nav screen-reader-text">' . __( 'Page', 'twentyfifteen' ) . ' </span>',
             ) );
         }else{
