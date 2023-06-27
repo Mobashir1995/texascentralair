@@ -39,6 +39,9 @@ Text Domain:  thechillbrothers
 .menu-search-form input[type="submit"] {
     display: none;
 }
+.tca-align-center{
+    align-items: center;
+}
 /* BreadCumb Style */
 .tca-breadcrumbs a{
     color: rgba(255,255,255,.5) !important;
