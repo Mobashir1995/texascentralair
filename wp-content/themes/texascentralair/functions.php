@@ -129,6 +129,22 @@ function add_last_nav_item($items, $args) {
 }
 add_filter( 'wp_nav_menu_items', 'add_last_nav_item', 10, 2 );
 
+/**
+ * Add CSS class to Main Menu
+ * 
+ * @param array $classes
+ * @param string $item
+ * @param object $args
+ * 
+ * @return array $classes
+ */
+function tca_add_main_menu_classes( $classes, $item, $args ) {
+	if ( 'main-menu' === $args->menu ) {
+	  $classes[] = 'tca-align-center';
+	}
+	return $classes;
+}
+add_filter('nav_menu_css_class', 'tca_add_main_menu_classes', 1, 3);
 
 /**
  * Include Files
