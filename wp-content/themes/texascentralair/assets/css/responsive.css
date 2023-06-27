@@ -8,12 +8,30 @@
 		font-size: 14px;
 	}
 }
+@media only screen and (max-width: 1024px) {
+	.site-navbar li {
+	    text-align: left;
+	}
+	.siteheader-main-menu .hfe-menu-item br{
+        display: none;
+    }
+}
 @media only screen and (max-width: 991px) {
 	.services-features .e-con-boxed.e-flex{
 		width: 50%
 	}
 }
 @media only screen and (max-width: 768px) {
+	.siteheader-main-menu .hfe-nav-menu__toggle{
+        text-align: center;
+        margin-right: 0 !important;
+	}
+    .siteheader-main-menu .hfe-menu-item br{
+        display: none;
+    }
+    .siteheader-main-menu nav.hfe-dropdown {
+        z-index: 9999999 !important;
+    }
 	.services-features .e-con-boxed.e-flex{
 		width: 100%
 	}
