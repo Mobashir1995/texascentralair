@@ -120,7 +120,7 @@ add_filter('bcn_display_separator', 'tca_bcn_separator', 10, 4);
  */
 function add_last_nav_item($items, $args) {
 	print_r($args);
-	if ( 'Main Menu' === $args->menu ) {
+	if ( 'main-menu' === $args->menu ) {
 		  $homelink = get_search_form(false);
 		  $items .= '<li>'.$homelink.'</li>';
 		  return $items;
