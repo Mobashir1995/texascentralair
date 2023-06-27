@@ -24,4 +24,7 @@
 	.search-result-page-container{
 		width: 95%;   
     }
+	.menu-mobile-full .hfe-nav-menu li{
+		width: 100%;
+	}
 }
