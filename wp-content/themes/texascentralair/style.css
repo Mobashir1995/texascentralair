@@ -36,6 +36,9 @@ Text Domain:  thechillbrothers
     width: 100%;
 }
 /* Menu */
+.menu-search-form {
+    padding: 15px;
+}
 .menu-search-form input[type="submit"] {
     display: none;
 }

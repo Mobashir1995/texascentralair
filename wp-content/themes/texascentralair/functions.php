@@ -9,7 +9,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit; // Exit if accessed directly.
 }
 
-define( 'TEXAS_CENTRAL_AIR_CHILD_VERSION', '0.0.3.29' );
+define( 'TEXAS_CENTRAL_AIR_CHILD_VERSION', '0.0.3.30' );
 
 /**
  * After Setup Theme Hook
@@ -121,7 +121,7 @@ add_filter('bcn_display_separator', 'tca_bcn_separator', 10, 4);
 function add_last_nav_item($items, $args) {
 	if ( 'main-menu' === $args->menu ) {
 		  $homelink = get_search_form(false);
-		  $items .= '<li class="menu-search-form">'.$homelink.'</li>';
+		  $items .= '<li class="menu-search-form tca-align-center">'.$homelink.'</li>';
 		  return $items;
 	}
 	return $items;
