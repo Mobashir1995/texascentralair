@@ -35,6 +35,10 @@ Text Domain:  thechillbrothers
     clear: both;
     width: 100%;
 }
+/* Menu */
+.menu-search-form input[type="submit"] {
+    display: none;
+}
 /* BreadCumb Style */
 .tca-breadcrumbs a{
     color: rgba(255,255,255,.5) !important;

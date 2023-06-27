@@ -9,7 +9,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit; // Exit if accessed directly.
 }
 
-define( 'TEXAS_CENTRAL_AIR_CHILD_VERSION', '0.0.3.27' );
+define( 'TEXAS_CENTRAL_AIR_CHILD_VERSION', '0.0.3.28' );
 
 /**
  * After Setup Theme Hook
@@ -122,7 +122,7 @@ function add_last_nav_item($items, $args) {
 	print_r($args);
 	if ( 'main-menu' === $args->menu ) {
 		  $homelink = get_search_form(false);
-		  $items .= '<li>'.$homelink.'</li>';
+		  $items .= '<li class="menu-search-form">'.$homelink.'</li>';
 		  return $items;
 	}
 	return $items;
