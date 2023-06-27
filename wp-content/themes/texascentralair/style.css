@@ -44,7 +44,7 @@ Text Domain:  thechillbrothers
 }
 /* Menu */
 .menu-search-form {
-    padding: 15px;
+    padding: 15px !important;
 }
 .menu-search-form form {
     text-align: left;
