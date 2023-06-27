@@ -312,3 +312,6 @@ select:focus{
     width: 100%;
     text-align: center;
 }
+footer .hfe-nav-menu li a.hfe-menu-item:hover {
+    text-decoration: underline;
+}
