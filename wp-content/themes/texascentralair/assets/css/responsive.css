@@ -43,6 +43,10 @@
 	.services-features .e-con-boxed.e-flex{
 		width: 100%
 	}
+	.services-features .elementor-icon-box-content{
+		display: flex;
+		align-items: center;
+	}
 	.tca-col-6 {
 		width: 100%;
 		float: none;
