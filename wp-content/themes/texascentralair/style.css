@@ -28,6 +28,13 @@ Text Domain:  thechillbrothers
     transition: .5s;
 }
 
+.tca-d-flex{
+    display: flex;
+}
+.tca-align-center{
+    align-items: center;
+}
+
 .site-navbar li {
     text-align: center;
 }
@@ -39,11 +46,11 @@ Text Domain:  thechillbrothers
 .menu-search-form {
     padding: 15px;
 }
+.menu-search-form form {
+    text-align: left;
+}
 .menu-search-form input[type="submit"] {
     display: none;
-}
-.tca-align-center{
-    align-items: center;
 }
 /* BreadCumb Style */
 .tca-breadcrumbs a{
